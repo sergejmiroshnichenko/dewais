@@ -1,0 +1,55 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 10px;
+  margin: 0 auto;
+  width: 100vw;
+}
+
+.container {
+  position: relative;
+  width: 450px;
+
+  &.input {
+    height: 45px;
+    margin-bottom: 20px;
+    padding: 40px 20px;
+  }
+}
+
+.inputContainer {
+  display: flex;
+}
+
+.errorMessage {
+  text-align: center;
+  color: red;
+  font-weight: 700;
+}
+
+.dropdown {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  max-height: 400px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 1px;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 0 10px;
+  }
+
+  .dropdown {
+    font-size: 14px;
+  }
+
+  .container {
+    width: 100%;
+  }
+}

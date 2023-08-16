@@ -1,0 +1,17 @@
+.header_nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  padding: 5px 0;
+  background: gray;
+  color: white;
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    width: 100%;
+  }
+}
