@@ -4,9 +4,11 @@ import { FC, useEffect, useState } from "react";
 import UserCard from "components/UserCard/UserCard";
 import { PrimaryButton } from "components/Button/Button";
 import Input from "components/Input/Input";
+import CircularProgress from "@mui/material/CircularProgress";
 
 const HomePage: FC = () => {
   const [search, setSearch] = useState("");
+
   const [searchQuery, setSearchQuery] = useState("");
 
   const [showDropdown, setShowDropdown] = useState(false);
@@ -66,7 +68,7 @@ const HomePage: FC = () => {
           {showDropdown && (
             <div className={styles.dropdown}>
               {isLoading ? (
-                <p>Loading...</p>
+                <CircularProgress className={styles.progress} />
               ) : (
                 <>
                   {!data.length ? (

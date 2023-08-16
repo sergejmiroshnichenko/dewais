@@ -40,6 +40,13 @@
   padding: 1px;
 }
 
+.progress {
+  display: flex;
+  justify-content: center;
+  margin: 25px auto;
+}
+
+
 @media (max-width: 480px) {
   .wrapper {
     padding: 0 10px;
