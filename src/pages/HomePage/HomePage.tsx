@@ -65,16 +65,15 @@ const HomePage: FC = () => {
 
           {showDropdown && (
             <div className={styles.dropdown}>
-              {isLoading && <p>Loading...</p>}
-
-              {!isLoading && data.length === 0 && (
-                <p className={styles.errorMessage}>No users found</p>
-              )}
-              {!isLoading && data.length > 0 && (
+              {isLoading ? (
+                <p>Loading...</p>
+              ) : (
                 <>
-                  {data.map((user) => (
-                    <UserCard key={user.id} {...user} />
-                  ))}
+                  {!data.length ? (
+                    <p className={styles.errorMessage}>No users found</p>
+                  ) : (
+                    data.map((user) => <UserCard key={user.id} {...user} />)
+                  )}
                 </>
               )}
             </div>

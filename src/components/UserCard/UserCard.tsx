@@ -1,7 +1,7 @@
 import styles from "./UserCard.module.scss";
 import { IUser } from "types/IUser";
-import { FC } from "react";
 import { useGetUserDetailsQuery } from "store/github/github.api";
+import { FC } from "react";
 
 const UserCard: FC<IUser> = ({ login, avatar_url, html_url }) => {
   const { data: userDetails } = useGetUserDetailsQuery(login);
